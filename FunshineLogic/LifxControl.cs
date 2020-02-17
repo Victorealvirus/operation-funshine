@@ -13,13 +13,13 @@ namespace FunshineLogic
         public LifxControl() 
         {
             RestClient = new RestClient("https://api.lifx.com/v1/lights");
-            RestClient.AddDefaultHeader("Authorization: ", "Bearer " + AccessToken);
+            RestClient.AddDefaultHeader("Authorization", "Bearer " + AccessToken);
         }
 
-        public IRestResponse GetLights()
+        public string GetLights()
         {
             var req = new RestRequest("all", DataFormat.Json);
-            return RestClient.Get(req);
+            return RestClient.Get(req).Content;
         }
     }
 }
