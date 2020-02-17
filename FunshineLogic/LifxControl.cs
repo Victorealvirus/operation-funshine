@@ -21,5 +21,11 @@ namespace FunshineLogic
             var req = new RestRequest("all", DataFormat.Json);
             return RestClient.Get(req).Content;
         }
+
+        public void ToggleLights()
+        {
+            var req = new RestRequest("all/toggle", DataFormat.Json);
+            RestClient.Post(req);
+        }
     }
 }
