@@ -22,10 +22,10 @@ namespace FunshineLogic
             return RestClient.Get(req).Content;
         }
 
-        public void ToggleLights()
+        public bool ToggleLights()
         {
             var req = new RestRequest("all/toggle", DataFormat.Json);
-            RestClient.Post(req);
+            return RestClient.Post(req).IsSuccessful;
         }
     }
 }

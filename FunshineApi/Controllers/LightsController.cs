@@ -27,9 +27,9 @@ namespace FunshineApi.Controllers
         
         [HttpPost]
         [Route("Toggle")]
-        public void Toggle()
+        public bool Toggle()
         {
-            new LifxControl().ToggleLights();
+            return new LifxControl().ToggleLights();
         }
     }
 }
