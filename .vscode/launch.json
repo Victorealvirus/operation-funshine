@@ -10,9 +10,9 @@
             "request": "launch",
             "preLaunchTask": "build",
             // If you have changed target frameworks, make sure to update the program path.
-            "program": "${workspaceFolder}/FunshineApi/bin/Debug/netcoreapp3.1/FunshineApi.dll",
+            "program": "${workspaceFolder}/Funshine/bin/Debug/netcoreapp3.1/Funshine.dll",
             "args": [],
-            "cwd": "${workspaceFolder}/FunshineApi",
+            "cwd": "${workspaceFolder}/Funshine",
             "stopAtEntry": false,
             // Enable launching a web browser when ASP.NET Core starts. For more information: https://aka.ms/VSCode-CS-LaunchJson-WebBrowser
             "serverReadyAction": {

@@ -5,8 +5,9 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
+using FunshineLogic;
 
-namespace funshine.Pages
+namespace Funshine.Pages
 {
     public class IndexModel : PageModel
     {
@@ -20,6 +21,12 @@ namespace funshine.Pages
         public void OnGet()
         {
 
+        }
+        
+        public void OnPost()
+        {
+            new LifxControl().ToggleLights();
+            Response.Redirect("/");
         }
     }
 }
